@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form playground</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="header">Forms playground</h1>
+      <form
+        enctype="multipart/form-data"
+        method="POST"
+        action="https://dev.cotenfrontend.pl/"
+        class="form"
+      >
+        <p>
+          <label for="firstName">Enter your name:</label>
+          <input
+            class="form__input"
+            id="firstName"
+            name="firstName"
+            placeholder="Your first name"
+          />
+        </p>
+        <p>
+          <label class="label" for="lastName">Your last name:</label>
+          <input
+            class="form__input"
+            id="lastName"
+            name="lastName"
+            placeholder="Your last name"
+          />
+        </p>
+        <p>
+          <label class="label" for="password">Enter your password:</label>
+          <input class="form__input" type="password" name="password" />
+        </p>
+        <p>
+          <label class="label" for="age">Choose your age(18-100):</label>
+
+          <input
+            class="form__input"
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="100"
+          />
+        </p>
+
+        <p>
+          <label class="label" for="phoneNumber"
+            >Enter your phone number:</label
+          >
+          <input
+            class="form__input"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            placeholder="48-000-000-000"
+            type="tel"
+          />
+        </p>
+        <p>
+          <label class="label" for="photo">Your photo</label>
+          <input class="form__input" type="file" name="photo" />
+        </p>
+        <p>
+          <label class="label"
+            >Ecperience level (0-low experience, 100- very high experience):
+            <input
+              name="experienceLevel"
+              class="form__input experience__level--js"
+              id="experienceLevel"
+              type="range"
+              min="0"
+              max="100"
+              step="10"
+            />
+          </label>
+        </p>
+        <p>
+          <label class="label" for="email">Enter your e-mail:</label>
+          <input class="form__input" type="email" name="email" />
+        </p>
+        <fieldset>
+          <legend>Address</legend>
+          <p>
+            <label class="label" for>Enter your street name:</label>
+            <input
+              class="form__input"
+              id="streetName"
+              name="streetName"
+              placeholder="Your street name"
+            />
+          </p>
+          <p>
+            <label class="label" for="cityName">Enter your city:</label>
+            <input
+              class="form__input"
+              id="cityName"
+              name="cityName"
+              placeholder="City name"
+            />
+          </p>
+          <p>
+            <label for="postalCode"
+              >Enter postal code:
+              <input
+                class="form__input"
+                name="postalCode"
+                pattern="[0-9]{2}-[0-9]{3}"
+                placeholder="00-000"
+                value="-"
+              />
+            </label>
+          </p>
+        </fieldset>
+        <p>
+          <label class="label" for="about-you">Tell something about you:</label>
+          <textarea
+            class="about-you"
+            id="about-you"
+            name="about-you"
+          ></textarea>
+        </p>
+        <p>
+          <label class="label" for="car-select">Choose a car you have:</label>
+          <select name="car-select" id="car-select">
+            <option value="volkswagen">Volkswagen</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="seat">Seat</option>
+            <option value="opel">Opel</option>
+            <option value="kia">Kia</option>
+            <option value="none">I don't have car</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>Favourite football team:</legend>
+
+          <p>
+            <label class="label"
+              ><input name="team" type="radio" value="real madrid" />Real
+              Madrid</label
+            >
+          </p>
+          <p>
+            <label class="label"
+              ><input
+                checked
+                name="team"
+                type="radio"
+                value="bayern munich"
+              />Bayern Munich</label
+            >
+          </p>
+          <p>
+            <label class="label"
+              ><input name="team" type="radio" value="juventus" />Juventus
+              F.C</label
+            >
+          </p>
+        </fieldset>
+        <p>
+          <label class="label">
+            <input class="agreement" type="checkbox" />I agree</label
+          >
+        </p>
+        <p class="submit">
+          <input type="submit" value="Send request" />
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
